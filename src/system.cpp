@@ -23,9 +23,12 @@ pids_ = LinuxParser::Pids() ;
 
 for(size_t i=0; i< pids_.size();i++){
     Process process(pids_[i]);
-    
+
     processes_.push_back(process);
 }
+
+      std::sort(processes_.begin(), processes_.end());  //use operator overloading to compare
+      std::reverse(std::begin(processes_), std::end(processes_));
 return processes_; }
 
 // TODO: Return the system's kernel identifier (string)
