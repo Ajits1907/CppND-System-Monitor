@@ -24,7 +24,7 @@ float Processor::Utilization() {
 linestream>> cpu>>user>>nice>>system>>idle>>iowait>>irq>>softirq>>steal;
   }
 
-// using calculation provided in stacfoverflow columns, using later and previous state values.
+// using calculation provided in stackoverflow columns, using later and previous state values.
 PrevIdle = previdle + previowait;
 Idle = idle + iowait;
 
